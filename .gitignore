@@ -1,0 +1,24 @@
+# Xilinx ISE Temporary Files
+_xmsgs/
+xlnx_auto_0_xdb/
+*.log
+*.jhd
+*.nfs*
+*.lso
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.par
+*.pcf
+*.ptwx
+*.unroutes
+*.xpi
+*.xwbt
+*.ise
+*.gise
+*.xise
+*.bak
+# Simulation
+*.isim/
+fuse.log
