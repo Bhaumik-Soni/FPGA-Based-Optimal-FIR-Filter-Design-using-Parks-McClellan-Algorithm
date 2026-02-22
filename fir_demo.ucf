@@ -1,0 +1,13 @@
+NET "*" IOSTANDARD = LVCMOS33;
+CONFIG VCCAUX = "3.3";
+
+# Onboard 50 MHz oscillator
+NET "CLK50M" LOC = "p84";
+NET "CLK50M" TNM_NET = "osc";
+TIMESPEC "TS_osc" = PERIOD "osc" 20.000ns;
+
+# Filter toggle switch
+NET "sw0" LOC = "p22";
+
+# DSO output pin
+NET "DSO_OUT" LOC = "p75";
