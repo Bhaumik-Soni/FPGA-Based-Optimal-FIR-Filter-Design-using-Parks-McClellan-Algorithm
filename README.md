@@ -135,6 +135,6 @@ If you find this project useful, consider giving it a ⭐ on GitHub!
 
 
 ---
-[cite_start]**Prepared by:** Bhaumik Soni [cite: 12, 51]  
-[cite_start]**Mentored by:** Dr. Arpita Patel [cite: 11, 52]  
-[cite_start]**Institution:** CHARUSAT - Chandubhai S. Patel Institute of Technology [cite: 40, 42]
+Prepared by:** Bhaumik Soni  
+Mentored by:** Dr. Arpita Patel  
+Institution:** CHARUSAT - Chandubhai S. Patel Institute of Technology 
