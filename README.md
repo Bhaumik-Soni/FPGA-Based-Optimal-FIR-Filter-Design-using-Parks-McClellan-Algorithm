@@ -1,31 +1,138 @@
-# FPGA-Based-Optimal-FIR-Filter-Design-using-Parks-McClellan-Algorithm
-# FPGA Implementation of an Optimal FIR Filter Using the Parks-McClellan Algorithm
+# 🚀 FPGA-Based Optimal FIR Filter Design using Parks-McClellan Algorithm
 
-## Project Overview
-[cite_start]This project demonstrates the design and hardware realization of a **21-tap low-pass Finite Impulse Response (FIR) filter**[cite: 18, 54]. [cite_start]The filter is optimized using the **Parks-McClellan (Remez Exchange) algorithm** to achieve an equiripple characteristic by minimizing the maximum frequency-response error[cite: 36, 68].
+## 📌 Project Overview
 
-[cite_start]The system processes a square-wave signal in real-time to remove high-frequency harmonics, resulting in a smooth, filtered output suitable for digital signal processing applications[cite: 17, 55].
+This project focuses on the design and FPGA implementation of a **21-tap low-pass Finite Impulse Response (FIR) filter** using the **Parks-McClellan (Remez Exchange) algorithm**.
 
-## Technical Specifications
-* [cite_start]**Filter Type:** 21-tap Optimal Low-Pass FIR[cite: 18, 79].
-* [cite_start]**Algorithm:** Parks-McClellan (Remez Exchange) for minimum-error equiripple response[cite: 22, 82].
-* [cite_start]**Architecture:** Shift-Register + Multiply-Accumulate (MAC) structure[cite: 23, 104].
-* [cite_start]**Fixed-Point Arithmetic:** Coefficients scaled to **16-bit signed integers**[cite: 22, 101].
-* [cite_start]**Hardware:** Xilinx Spartan-6 XC6SLX9 FPGA[cite: 26, 70].
-* [cite_start]**Clock Frequency:** 50 MHz board clock[cite: 37, 139].
+The objective is to achieve an **optimal equiripple frequency response**, minimizing maximum error between desired and actual response. The designed filter is implemented on an FPGA to perform **real-time signal filtering**, demonstrating efficient hardware-based digital signal processing.
 
-## Key Features
-* [cite_start]**Internal Test Generation:** Includes a frequency divider that produces a ~3 Hz square wave, making the filtering effect clearly visible on an oscilloscope[cite: 24, 157].
-* [cite_start]**Real-Time Processing:** Executes convolution at full hardware speed (50 MHz)[cite: 136, 223].
-* [cite_start]**Hardware Verification:** Successful validation using a Digital Storage Oscilloscope (DSO), showing significant harmonic reduction and signal smoothing[cite: 31, 73].
+The system takes a square-wave input signal and suppresses its high-frequency harmonics, producing a smoother output waveform.
 
-## Repository Structure
-* [cite_start]`/src`: Verilog source files (`fir_filter.v`, `test_gen.v`, `top.v`)[cite: 108, 142, 169].
-* [cite_start]`/constraints`: Physical pin mapping (`.ucf` file)[cite: 29, 197].
-* [cite_start]`/docs`: Project report and implementation methodology[cite: 49, 97].
+---
 
-## Hardware Results
-[cite_start]The output waveform demonstrates the effective suppression of high-frequency components, transforming a sharp square wave into a smoothed signal[cite: 28, 58].
+## ⚙️ Technical Specifications
+
+* **Filter Type:** 21-Tap Low-Pass FIR Filter
+* **Design Algorithm:** Parks-McClellan (Remez Exchange)
+* **Response Type:** Equiripple (Minimum Maximum Error)
+* **Architecture:** Shift Register + Multiply-Accumulate (MAC)
+* **Arithmetic:** 16-bit Fixed-Point
+* **FPGA Board:** Xilinx Spartan-6 (XC6SLX9)
+* **Clock Frequency:** 50 MHz
+
+---
+
+## ✨ Key Features
+
+* ✅ Optimal equiripple filter design
+* ✅ Real-time high-speed processing on FPGA
+* ✅ Efficient hardware implementation (MAC-based)
+* ✅ Built-in square wave generator (~3 Hz)
+* ✅ Verified using Digital Storage Oscilloscope (DSO)
+* ✅ Suitable for VLSI and FPGA-based DSP systems
+
+---
+
+## 🧠 Working Principle
+
+The FIR filter operates using a **discrete convolution process**:
+
+[
+y[n] = \sum_{k=0}^{N-1} h[k] \cdot x[n-k]
+]
+
+* Input samples are stored in a **shift register**
+* Each sample is multiplied by filter coefficients
+* Results are summed using a **MAC unit**
+* Output is generated every clock cycle
+
+The Parks-McClellan algorithm ensures that coefficients are optimized for **minimum error and linear phase response**.
+
+---
+
+## 🛠️ Tools & Technologies
+
+* **Verilog HDL**
+* **Xilinx ISE / FPGA Toolchain**
+* **Parks-McClellan Algorithm (MATLAB / Python)**
+* **Digital Storage Oscilloscope (DSO)**
+
+---
+
+## 📂 Repository Structure
+
+```id="q7d92k"
+├── src/                # Verilog source files
+│   ├── fir_filter.v
+│   ├── test_gen.v
+│   └── top.v
+├── constraints/        # FPGA pin mapping (.ucf)
+├── docs/               # Project report & design details
+├── README.md
+```
+
+---
+
+## 🔬 Implementation Details
+
+### 🔹 Filter Design
+
+* Coefficients generated using Parks-McClellan algorithm
+* Optimized for equiripple frequency response
+* Converted to fixed-point format for hardware
+
+### 🔹 FPGA Implementation
+
+* Shift register stores input samples
+* MAC unit performs convolution
+* Fully synchronous design using system clock
+
+### 🔹 Test Signal Generation
+
+* Internal frequency divider generates ~3 Hz square wave
+* Used to visualize filtering effect clearly
+
+---
+
+## 📊 Hardware Results
+
+* Square wave input is successfully smoothed
+* High-frequency harmonics are significantly reduced
+* Output waveform shows clean low-frequency behavior
+* Verified using oscilloscope measurements
+
+---
+
+## 🎯 Applications
+
+* Digital Signal Processing (DSP)
+* Communication Systems
+* Audio Signal Filtering
+* Embedded & FPGA Systems
+* VLSI Design Projects
+
+---
+
+## 📈 Future Scope
+
+* Implementation on advanced FPGA platforms
+* High-order filter optimization
+* Power-efficient FIR architectures
+* Integration with real-time DSP systems
+
+---
+
+## 👨‍💻 Author
+
+**Bhaumik Soni**
+ECE | VLSI | Embedded Systems | FPGA
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub!
+
 
 ---
 [cite_start]**Prepared by:** Bhaumik Soni [cite: 12, 51]  
